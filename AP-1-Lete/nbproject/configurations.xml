@@ -40,6 +40,14 @@
             <pElem>../../../../../opencv3.0.0/include</pElem>
           </incDir>
         </cTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../../../../opencv3.0.0/x64</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>../../../../../opencv3.0.0/x64/opencv_world300.dll</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

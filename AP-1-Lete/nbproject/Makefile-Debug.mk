@@ -52,11 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-L../../../../../opencv3.0.0/x64 ../../../../../opencv3.0.0/x64/opencv_world300.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ap-1-lete.exe
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ap-1-lete.exe: ../../../../../opencv3.0.0/x64/opencv_world300.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ap-1-lete.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -73,6 +75,8 @@ ${OBJECTDIR}/main.o: main.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_world300.dll
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ap-1-lete.exe
 
 # Subprojects
 .clean-subprojects:
